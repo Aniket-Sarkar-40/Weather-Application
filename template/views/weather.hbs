@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headCode}}
+</head>
+
+<body>
+    {{>navbar}}
+
+    {{!-- main --}}
+    <div class="container-fluid main_head">
+        <div class="row tempBox">
+            <div class="col-md-10 col-12 mx-auto tempBox">
+
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempInformation">
+                    <div class="belowSearch">
+                        <div class="top_layer">
+                            <p id="day">Monday</p>
+                            <p id="today">13 APR</p>
+                        </div>
+                        <div class="main_layer">
+                            <p id="city_name">Get output here</p>
+                            <div class="middle_layer data_hide">
+                                <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+                                <p id="temp_status"><i class="fa fa-cloud"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{!-- footer --}}
+    {{>footer}}
+
+    <script>
+        
+        const currDate = document.getElementById("day");
+        const today = document.getElementById("today");
+        
+        
+        const getCurrDate =()=>{
+            var week = new Array(7);
+            week[0] = "SUNDAY";
+            week[1] = "MONDAY";
+            week[2] = "TUESDAY";
+            week[3] = "WEDNESDAY";
+            week[4] = "THURSDAY";
+            week[5] = "FRIDAY";
+            week[6] = "SATURDAY";
+            const Currday = new Date();
+            return week[Currday.getDay()];
+        }
+
+        const getCurrTime = ()=>{
+            var currentTime = new Date();
+            var mon = currentTime.getMonth();
+            var date = currentTime.getDate();
+            var months = ["JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUNE" ,"JULY" ,"AUG" , "SEPT" ,"OCT" , "NOV" , "DEC"];
+
+            return ( `${date} ${months[mon]}` );
+        }
+
+        currDate.innerHTML = getCurrDate();
+        today.innerHTML = getCurrTime();
+
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

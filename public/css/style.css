@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&family=Merriweather:ital,wght@1,300&family=Piazzolla&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+    
+}
+
+:root{
+    --main-bg : #1e272e;
+    --main-color : #0097e6;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    background-color: var(--main-bg);
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+.navbar li{
+    margin-left: 2rem;
+}
+a{
+    color: white;
+
+}
+a:hover{
+    color: var(--main-color);
+    font-weight: bold;
+}
+.navbar-brand{
+    font-size: 19px;
+}
+.navbar-toggler{
+    background-color: rgb(157, 152, 152);
+}
+
+.fa-snowflake{
+    color: #007bff;
+    animation: rotate 2s linear  infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* main header */
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.main_header_left h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+}
+
+.main_header_left h1 span{
+    color: var(--main-color);
+}
+
+button{
+    padding: 0.5rem 1.5rem;
+    border: 0px solid ;
+    border-radius: 2rem;
+    background-color: rgb(234, 233, 233);
+    color: var(--main-bg);
+    font-size: 1.5rem;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+
+}
+
+/* about Page */
+.txt{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.txt p{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+
+.txt h1{
+    font-size: 3.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.txt h1 span{
+    color: var(--main-color);
+}
+
+.image{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.myPic{
+    height: 50rem;
+}
+
+/* temp */
+.tempBox{
+    display: flex;
+    height: 70rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.temp_form{
+    width: 60%;
+    position: relative;
+
+}
+.main_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#cityName{
+    height: 6.3rem;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 3rem;
+    background-color: var(--main-bg);
+    padding: 0 3rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+#submitBtn{
+    height: 5.3rem;
+    width: 9rem;
+    position: absolute;
+    top: 5px;
+    right: 6.5px;
+    border: 0px solid;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    background-color: var(--main-color);
+    color: white;
+}
+
+#submitBtn:hover{
+    background-color: white;
+    color: var(--main-color);
+}
+
+::placeholder{
+color: rgb(224, 228, 228);
+font-size: 1.5rem;
+}
+
+.tempInformation{
+    min-height: 31rem;
+    width: 50rem;
+    margin: 9rem;
+    color: white;
+}
+.belowSearch{
+    background-color: var(--main-bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 0px solid;
+    border-radius: 10px;
+}
+
+.top_layer{
+    width: 97.6%;
+    height: 23%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 6px;
+   
+}
+
+.top_layer p{
+    color: white;
+    font-weight: 300;
+    padding: 2.6rem;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.main_layer{
+    width: 100%;
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main_layer #city_name{
+    padding: 2rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+
+}
+
+.main_layer .middle_layer p, .main_layer .middle_layer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.fas , .fa-smog{
+    color: #2bc0fa;
+}
+
+.fa-cloud-showers-heavy{
+    color: #1e7ea4;
+}
+
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+.data_hide{
+    visibility:hidden;
+    transition: all 0.3s linear;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: var(--main-bg);
+    /* width: 100vw; */
+    height: 7rem;
+    margin-top: auto;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* responsive code */
+
+@media (max-width: 768px){
+    .main_header_left , .about-right{
+        height: auto;
+        margin: 5rem 0 ;
+    }
+    .main_header_right , .about-left{
+        height: auto;
+        margin: 3rem 0 0; 
+    }
+
+    .main_header_right figure img{
+        height: 37rem;
+    }
+    .temp_form{
+        width: 100%;
+    }
+    .tempInformation{
+        width: 95%;
+    }
+    .main_layer .middle_layer p, .main_layer .middle_layer .fa{
+        font-size: 5rem;
+    }
+}
